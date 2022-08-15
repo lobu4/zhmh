@@ -1,0 +1,24 @@
+spring:
+  #连接数据库
+  datasource:
+    password: 123456
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zhmh?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false&serverTimezone=GMT%2B8
+
+  #开启restful风格
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+mybatis:
+  #注册映射文件
+  mapper-locations: classpath:com/han/zhmh/mapper/*.xml
+  #驼峰命名转换
+  #  configuration:
+  #    map-underscore-to-camel-case: true
+  #开启别名
+  type-aliases-package: com.han.zhmh.pojo
+server:
+  port: 8081
